@@ -102,11 +102,13 @@ h4 {
   height: 20px;
   width: 20px;
   position: absolute;
-  transition: bottom 0.3s ease;
+   transition: bottom 5s ease;
+  
 }
 
 .bubble1 {
     left: 10px;
+    
   }
 
   .bubble2 {

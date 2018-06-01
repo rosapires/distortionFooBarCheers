@@ -15,7 +15,7 @@ console.log(data.inQueue);
 let list = document.querySelector("#list");
 document.querySelector('#inQueue').innerHTML = data.inQueue;
 
-// HERE I ANIMATE THE BEER GLASS
+// HERE I ANIMATE THE LIQUID AND FOAM
 
 let liquid = document.querySelector("#liquid");
 let foam = document.querySelector(".beer-foam");
@@ -52,32 +52,34 @@ if (data.inQueue > 15 && data.inQueue <= 22) {
     foam.style.bottom = "198px";
   }
 
-
+//HERE I ANIMATE POURING BEER
   let fill = document.querySelector(".pour");
-  var oldNumber = 0;
+  
 if( oldNumber < data.inQueue){
-    console.log("hi number")
+    //console.log("hi number")
     fill.style.height="600px";
     setTimeout(function(){fill.style.height="0px";}, 2000);
 }
+
 oldNumber = data.inQueue;
 
+//HERE I ANIMATE THE BUBBLES
 //console.log(bubbles);
 let bubbles = [".bubble1", ".bubble2", ".bubble3", ".bubble4", ".bubble5"];
 bubbles.forEach(bubble => {
-    console.log("hi bubbles");
+    //console.log("hi bubbles");
     let goUp = Math.floor((Math.random() * 100));
    
     document.querySelector(bubble).style.bottom = goUp+'px';
-    // bubble.style.bottom = goUp;
-    console.log(document.querySelector(bubble));
   
-    
+    // bubble.style.bottom = goUp;
+    //console.log(document.querySelector(bubble));
+   
 });
 
 }
 setInterval(() => getData(), 10000);
 getData()
 
-
+var oldNumber = 0;
 
